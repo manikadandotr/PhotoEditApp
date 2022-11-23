@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imageSelectionFragment">
+
+    <fragment
+        android:id="@+id/imageSelectionFragment"
+        android:name="com.example.imageapp.ImageSelectionFragment"
+        android:label="fragment_image_selection"
+        tools:layout="@layout/fragment_image_selection" >
+        <action
+            android:id="@+id/action_imageSelectionFragment_to_imageEditingFragment"
+            app:destination="@id/imageEditingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageEditingFragment"
+        android:name="com.example.imageapp.ImageEditingFragment"
+        android:label="fragment_image_editing"
+        tools:layout="@layout/fragment_image_editing" >
+        <action
+            android:id="@+id/action_imageEditingFragment_to_imagePreviewFragment"
+            app:destination="@id/imagePreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imagePreviewFragment"
+        android:name="com.example.imageapp.ImagePreviewFragment"
+        android:label="fragment_image_preview"
+        tools:layout="@layout/fragment_image_preview" >
+        <action
+            android:id="@+id/action_imagePreviewFragment_to_imageSelectionFragment"
+            app:destination="@id/imageSelectionFragment" />
+    </fragment>
+</navigation>
